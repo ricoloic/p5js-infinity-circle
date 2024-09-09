@@ -47,14 +47,14 @@ function setup() {
   let spacing = 6 * random(1, 3);
   let endRadius = radius;
   let offset = 0;
-  for (let i = 0; i < count; i++) {
+  for (let i = count - 1; i >= 0; i--) {
     [endRadius, offset] = circles(
       x, y,
       endRadius + spacing,
       amount,
       colors[i % colors.length].rgba,
       spacing,
-      5,
+      10,
       offset,
       map(i, 0, count, 255, random(50, 200))
     );
